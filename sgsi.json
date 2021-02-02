@@ -1,5 +1,5 @@
 {
-  "rom_url": "https://hugeota.d.miui.com/21.1.28/miui_GAUGUIN_21.1.28_917b166068_11.0.zip",
+  "rom_url": "https://hugeota.d.miui.com/21.1.29/miui_PYXIS_21.1.29_f6d8c70f77_11.0.zip",
   "rom_name": "xiaomi.eu_multi_HMNote7_20.10.22_v12-10.zip",
   "pack_sgsi": "HMNote7_20.10.22_Q-eu_XiaoxinSGSIs_Pinkdoge.7z",
   "rom_type": "AB",
@@ -11,7 +11,7 @@
   "make_h2os": false,
   "make_smartisanos": false,
   "make_zui": false,
-  "make_super": true,
+  "make_super": false,
   "upload_transfer": true,
   "upload_artifact": false
 }
