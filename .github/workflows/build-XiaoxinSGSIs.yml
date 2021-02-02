@@ -108,21 +108,21 @@ jobs:
            cd SGSI-build-tool-11/11
            sudo bash make.sh ${{ steps.var.outputs.rom_type }}
            
+       - name: Make Super
+         if: steps.var.outputs.make_super == 'true'
+         run: |
+           cd SGSI-build-tool-11/11
+           sudo bash SGSI2.sh
+           
        - name: Enable Fix Light
          if: steps.var.outputs.fix_light == 'true'
          run: |
            cd SGSI-build-tool-11/11
-           sudo bash SGSI2.sh
+           sudo bash SGSI3.sh
          
        - name: Enable Fix Bug
          if: steps.var.outputs.fix_bug == 'true'
          run: | 
-           cd SGSI-build-tool-11/11
-           sudo bash SGSI3.sh
-           
-       - name: Make Super
-         if: steps.var.outputs.make_super == 'true'
-         run: |
            cd SGSI-build-tool-11/11
            sudo bash SGSI4.sh
          
