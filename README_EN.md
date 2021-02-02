@@ -18,6 +18,9 @@ The configuration file is [sgsi.json](sgsi.json)
 
 |   Variable             |  Type   | Description                                                         |
 | ------------------ | ------- | ------------------------------------------------------------ |
+| `fix_light`     | Boolean  | Indicates whether to fix light                                        |
+| `fix_bug`     | Boolean  | Indicates whether to fix bug                                      |
+| `rom_type`  | String  | Rom Type  A or AB                                    |
 | `rom_url`     | String  | Your rom url                                        |
 | `rom_name`  | String  | Your rom file name                                        |
 | `pack_sgsi`  | String  | The compressed file name after compilation                                        |

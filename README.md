@@ -24,6 +24,9 @@
 
 | 名称               | 类型    | 描述                                                         |
 | ------------------ | ------- | ------------------------------------------------------------ |
+| `fix_light`     | Boolean  | 指示是否启用亮度修复                                        |
+| `fix_bug`     | Boolean  | 指示是否启用bug修复                                        |
+| `rom_type`  | String  | Rom分区A或AB                                      |
 | `rom_url`     | String  | Rom地址                                        |
 | `rom_name`  | String  | Rom文件名                                        |
 | `pack_sgsi`  | String  | 打包压缩后的文件名                                        |
