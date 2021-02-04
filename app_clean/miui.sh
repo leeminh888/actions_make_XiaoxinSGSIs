@@ -4,3 +4,5 @@ LOCALDIR=`cd "$( dirname $0 )" && pwd`
 cd $LOCALDIR
 
 #rm -rf $1/data-app/*
+rm -rf $1/system_ext/apex
+
