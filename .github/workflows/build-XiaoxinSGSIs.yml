@@ -67,13 +67,17 @@ jobs:
          if: steps.var.outputs.make_miui == 'true'
          run: |
            sudo rm -rf SGSI-build-tool-11/11/fixbug/fixbug.sh
+           sudo rm -rf SGSI-build-tool-11/11/apps_clean/miui.sh
            mv fix/MIUI.sh SGSI-build-tool-11/11/fixbug/fixbug.sh
+           mv app_clean/miui.sh SGSI-build-tool-11/11/apps_clean/miui.sh
            
        - name: Make Flyme SGSI
          if: steps.var.outputs.make_flyme == 'true'
          run: |
            sudo rm -rf SGSI-build-tool-11/11/fixbug/fixbug.sh
+           sudo rm -rf SGSI-build-tool-11/11/apps_clean/flyme.sh
            mv fix/Flyme.sh SGSI-build-tool-11/11/fixbug/fixbug.sh
+           mv app_clean/flyme.sh SGSI-build-tool-11/11/apps_clean/flyme.sh
            
        - name: Make ColorOS SGSI
          if: steps.var.outputs.make_coloros == 'true'
@@ -81,12 +85,16 @@ jobs:
            sudo python3 SGSI-build-tool-11/11/oppo_ozip/ozipdecrypt.py SGSI-build-tool-11/11/tmp/${{ steps.var.outputs.rom_name }}
            sudo rm -rf SGSI-build-tool-11/11/tmp/${{ steps.var.outputs.rom_name }} SGSI-build-tool-11/11/fixbug/fixbug.sh
            mv fix/ColorOS.sh SGSI-build-tool-11/11/fixbug/fixbug.sh
+           sudo rm -rf SGSI-build-tool-11/11/apps_clean/oppo.sh
+           mv app_clean/oppo.sh SGSI-build-tool-11/11/apps_clean/oppo.sh
            
        - name: Make H2OS SGSI
          if: steps.var.outputs.make_h2os == 'true'
          run: |
            sudo rm -rf SGSI-build-tool-11/11/fixbug/fixbug.sh
            mv fix/H2OS.sh SGSI-build-tool-11/11/fixbug/fixbug.sh
+           sudo rm -rf SGSI-build-tool-11/11/apps_clean/h2os.sh
+           mv app_clean/h2os.sh SGSI-build-tool-11/11/apps_clean/h2os.sh
            
        - name: Make SmartisanOS SGSI
          if: steps.var.outputs.make_smartisanos == 'true'
