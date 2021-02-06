@@ -30,6 +30,8 @@ echo '<!-- whether support fps change -->
     
 echo "</features>" >> $1/etc/device_features/*
 mv $1/etc/device_features/* $1/etc/device_features/oppo6853.xml
+echo "/system/system/etc/device_features/oppo6853.xml  u:object_r:system_file:s0" >> $1/../../config/system_file_contexts
+echo "/system/system/etc/device_features/oppo6853.xml 0000 0000 0644" >> $1/../../config/system_fs_config
 
 echo "#property for fps switch mode type
       ro.vendor.fps.switch.default=true
