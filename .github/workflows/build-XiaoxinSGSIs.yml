@@ -152,16 +152,20 @@ jobs:
            sudo mv Patch1.zip Patch2.zip Patch3.zip SGSI-build-tool-11/11/SGSI/
        - name: 7z SGSI
          run: 7za a -t7z -r ${{ steps.var.outputs.pack_sgsi }} SGSI-build-tool-11/11/SGSI/*
-
-       - name: Upload SGSI to WeTransfer
+          
+       - name: Zip AB and upload 
          if: steps.var.outputs.upload_transfer == 'true'
          run: |
-           curl -sL https://git.io/file-transfer | sh
-           ./transfer wet ${{ steps.var.outputs.pack_sgsi }}
-          
-       - name: Upload SGSI to Artifact
-         if: steps.var.outputs.upload_artifact == 'true'
-         uses: actions/upload-artifact@v2
-         with: 
-           name: XiaoxinSGSIs
-           path: ${{ steps.var.outputs.pack_sgsi }}
+              expect -c " 
+              spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net
+              expect \"Password\"        
+              send \"${{ secrets.SFPASS }}\r\"
+              expect \"sftp> \"
+              send \"cd ${{ secrets.SFDIR }}\r\"
+              set timeout -1
+              send \"put ${{ steps.var.outputs.pack_sgsi }}\r\"
+              expect \"Uploading\"
+              expect \"100%\"
+              expect \"sftp>\"
+              send \"bye\r\"
+              interact"
