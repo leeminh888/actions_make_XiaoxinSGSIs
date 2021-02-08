@@ -1,7 +1,7 @@
 {
-  "rom_url": "https://hugeota.d.miui.com/21.1.28/miui_CANNON_21.1.28_9174f340b3_11.0.zip",
-  "rom_name": "xiaomi.eu_multi_HMNote7_20.10.22_v12-10.zip",
-  "pack_sgsi": "HMNote7_20.10.22_Q-eu_XiaoxinSGSIs_Pinkdoge.7z",
+  "rom_url": "https://hugeota.d.miui.com/V12.0.8.0.QJSCNXM/miui_GAUGUIN_V12.0.8.0.QJSCNXM_2e2388b297_10.0.zip",
+  "rom_name": "miui_GAUGUIN_V12.0.8.0.QJSCNXM_2e2388b297_10.0.zip",
+  "pack_sgsi": "miui_GAUGUIN_V12.0.8.0.QJSCNXM_leeminh.7z",
   "rom_type": "AB",
   "fix_light": true,
   "fix_bug": true,
