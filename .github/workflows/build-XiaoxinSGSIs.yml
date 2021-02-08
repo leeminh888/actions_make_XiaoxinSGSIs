@@ -1,13 +1,7 @@
 name: build_XiaoxinSGSIs
 
-on:
-  watch:
-    types: [started]
-#  push:
-#    branches: [ master ]
-#  pull_request:
-#    branches: [ master ]
-    
+on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -158,6 +152,8 @@ jobs:
          run: |
               expect -c " 
               spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net
+              expect \"yes/no\"
+              send \"yes\r\" 
               expect \"Password\"        
               send \"${{ secrets.SFPASS }}\r\"
               expect \"sftp> \"
