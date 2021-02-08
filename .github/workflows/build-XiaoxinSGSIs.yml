@@ -153,7 +153,7 @@ jobs:
        - name: 7z SGSI
          run: 7za a -t7z -r ${{ steps.var.outputs.pack_sgsi }} SGSI-build-tool-11/11/SGSI/*
           
-       - name: Zip AB and upload 
+       - name: upload_transfer
          if: steps.var.outputs.upload_transfer == 'true'
          run: |
               expect -c " 
