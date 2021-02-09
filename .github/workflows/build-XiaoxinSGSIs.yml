@@ -151,7 +151,6 @@ jobs:
        - name: upload_transfer
          if: steps.var.outputs.upload_transfer == 'true'
          run: |
-              cd SGSI-build-tool-11/11/SGSI
               expect -c " 
               spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net
               expect \"yes/no\"
