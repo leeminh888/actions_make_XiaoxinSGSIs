@@ -134,17 +134,6 @@ jobs:
            cd SGSI-build-tool-11/11
            sudo bash SGSI5.sh ${{ steps.var.outputs.rom_type }}
          
-       - name: Make Patch Module
-         run: |
-           zip -r Patchmod.zip SGSI-build-tool-11/11/out/vendor/app/* SGSI-build-tool-11/11/out/vendor/bin/* SGSI-build-tool-11/11/out/vendor/etc/* SGSI-build-tool-11/11/out/vendor/lib/* SGSI-build-tool-11/11/out/vendor/lib64/* SGSI-build-tool-11/11/out/vendor/overlay/*
-           sudo mv Patchmod.zip SGSI-build-tool-11/11/SGSI/
-           
-       - name: Zip Patch  
-         run: |
-           zip -r Patch1.zip Patch/Patch1/*
-           zip -r Patch2.zip Patch/Patch2/*
-           zip -r Patch3.zip Patch/Patch3/*
-           sudo mv Patch1.zip Patch2.zip Patch3.zip SGSI-build-tool-11/11/SGSI/
        - name: 7z SGSI
          run: 7za a -t7z -r ${{ steps.var.outputs.pack_sgsi }} SGSI-build-tool-11/11/SGSI/*
           
