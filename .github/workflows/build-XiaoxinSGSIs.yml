@@ -39,20 +39,12 @@ jobs:
            echo "::set-output name=upload_transfer::$(jq -r '.upload_transfer' sgsi.json)"
            echo "::set-output name=upload_artifact::$(jq -r '.upload_artifact' sgsi.json)"
          id: var
-           
-       - name: Download XiaoxinSGSIs Tools
-         uses: robinraju/release-downloader@v1
-         with:
-           repository: "xiaoxindada/SGSI-build-tool"
-           latest: true
-           fileName: "SGSI-build-tool-12.tar"
-           
+                
        - name: Initialization environment
          run: |
-           sudo tar -xf SGSI-build-tool-12.tar
-           sudo rm -rf SGSI-build-tool-12/12/setup.sh
-           sudo mv bin/setup.sh SGSI-build-tool-12/12/
-           cd SGSI-build-tool-12/12
+           git clone https://github.com/xiaoxindada/SGSI-build-tool.git -b 12
+           cd SGSI-build-tool-12
+           cd SGSI-build-tool-12
            sudo bash setup.sh
            
        - name: Download Rom
