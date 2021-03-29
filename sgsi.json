@@ -1,7 +1,7 @@
 {
-  "rom_url": "https://android.googleapis.com/packages/ota-api/package/7fbbd544421a85d95c891c11b80826aed66672ce.zip",
-  "rom_name": "7fbbd544421a85d95c891c11b80826aed66672ce.zip",
-  "pack_sgsi": "vsmart_live4_leeminh.7z",
+  "rom_url": "https://android.googleapis.com/packages/ota-api/package/65ea10d5c2ebf14077f3f6d5a1fafb38941593cd.zip",
+  "rom_name": "65ea10d5c2ebf14077f3f6d5a1fafb38941593cd.zip",
+  "pack_sgsi": "vsmart_aris_leeminh.7z",
   "rom_type": "AB",
   "fix_light": true,
   "fix_bug": true,
